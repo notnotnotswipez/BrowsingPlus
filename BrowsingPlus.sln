@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrowsingPlus", "BrowsingPlus\BrowsingPlus.csproj", "{BEE90210-3D4C-4141-8503-9FB854E94168}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEE90210-3D4C-4141-8503-9FB854E94168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE90210-3D4C-4141-8503-9FB854E94168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE90210-3D4C-4141-8503-9FB854E94168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE90210-3D4C-4141-8503-9FB854E94168}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7EBBF0F-90AE-4DD8-8004-1C5F5AFBF01F}
+	EndGlobalSection
+EndGlobal
