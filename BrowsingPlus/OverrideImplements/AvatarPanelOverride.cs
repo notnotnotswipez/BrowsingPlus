@@ -101,12 +101,12 @@ namespace BrowsingPlus.OverrideImplements
             {
                 slzContainer.AddEntry(quickCrateRef.title, () =>
                 {
-                    PlayerRefs.Instance.PlayerRigManager.SwapAvatarCrate(new Barcode(quickCrateRef.barcode));
+                    SwapAvatarAndCorrectlyScale(quickCrateRef.barcode);
                 });
 
                 allContainer.AddEntry(quickCrateRef.title, () =>
                 {
-                    PlayerRefs.Instance.PlayerRigManager.SwapAvatarCrate(new Barcode(quickCrateRef.barcode));
+                    SwapAvatarAndCorrectlyScale(quickCrateRef.barcode);
                 });
             }
            
@@ -126,7 +126,7 @@ namespace BrowsingPlus.OverrideImplements
                     {
                         container.AddEntry(quickCrateRef.title, () =>
                         {
-                            PlayerRefs.Instance.PlayerRigManager.SwapAvatarCrate(new Barcode(quickCrateRef.barcode));
+                            SwapAvatarAndCorrectlyScale(quickCrateRef.barcode);
                         });
                     }
                 }
@@ -157,9 +157,17 @@ namespace BrowsingPlus.OverrideImplements
             {
                 allContainer.AddEntry(added.title, () =>
                 {
-                    PlayerRefs.Instance.PlayerRigManager.SwapAvatarCrate(new Barcode(added.barcode));
+                    SwapAvatarAndCorrectlyScale(added.barcode);
                 });
             }
+        }
+
+
+        private static void SwapAvatarAndCorrectlyScale(string barcode) {
+            PlayerRefs.Instance.PlayerRigManager.SwapAvatarCrate(new Barcode(barcode)).GetAwaiter().OnCompleted(new Action(() => {
+                PlayerRefs.Instance._bodyVitals.PROPEGATE();
+                PlayerRefs.Instance._bodyVitals.PROPEGATE_SOFT();
+            }));
         }
     }
 }

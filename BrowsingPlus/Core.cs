@@ -9,7 +9,7 @@ using System.Linq;
 using UnityEngine.UI;
 using static Il2CppSLZ.Bonelab.CrateFilters;
 
-[assembly: MelonInfo(typeof(BrowsingPlus.Core), "BrowsingPlus", "1.0.0", "notnotnotswipez", null)]
+[assembly: MelonInfo(typeof(BrowsingPlus.Core), "BrowsingPlus", "1.1.0", "notnotnotswipez", null)]
 [assembly: MelonGame("Stress Level Zero", "BONELAB")]
 
 namespace BrowsingPlus
